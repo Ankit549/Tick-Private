@@ -35,10 +35,10 @@ def getHandler():
      PA = r["address"]
      PS = r["amount"]
      PR = r["tokenid"]
-     txn = tron.trx.send_token(PA, 10*100000*PS, PR);
-     return PK
+     txn = tron.trx.send_token(PA, 1*PS, PR);
+     return txn["transaction"]["txID"]
     
- 
+    
    
 if __name__ == '__main__':
  app.run()
